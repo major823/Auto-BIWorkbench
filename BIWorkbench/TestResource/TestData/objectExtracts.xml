@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Extracts>
+    <Home>
+        <userTenantsRoles>#DDL_UserTenantsRoles</userTenantsRoles>
+        <icon>a[title='Extracts']</icon>
+    </Home>
+    <ExistingExtracts>
+        <createNewExtractButton>#existingExtractsTab > button:nth-child(2)</createNewExtractButton>
+    </ExistingExtracts>
+    <ExtractBuilder>
+        <Properties>
+            <spansSchema>#tree * span</spansSchema>
+            <canvas>#canvas</canvas>
+            <allColomns>div[class="field-check column-field"]> input</allColomns>
+            <extractName>input[data-bind='value: extractName']</extractName>
+            <extractDescription>input[data-bind='value: extractDescription']</extractDescription>
+            <subjectAreaAndVisibiity>#existingExtractPropertiesTab2 * select</subjectAreaAndVisibiity>
+            <publishCheckBox>#chkPublish</publishCheckBox>
+        </Properties>
+        <Roles>
+            <RolesTab>Roles</RolesTab>
+            <allRoles>span[data-bind="text: RoleName"]</allRoles>
+            <allCheckBoxes>#existingExtractRolesTab2 * input</allCheckBoxes>
+        </Roles>
+        <ExtractDelivery>
+            <extractDeliveryTab>Extract Delivery</extractDeliveryTab>
+            <deliveryButton>#existingExtractDeliveryTab2 * button</deliveryButton>
+            <delivery>#existingExtractDeliveryTab2 * select[class='form-control']</delivery>
+        </ExtractDelivery>
+        <ExtractSchedule>
+            <extractScheduleTab>Extract Schedule</extractScheduleTab>
+            <scheduleTypes>input[type='radio']</scheduleTypes>
+            <startDate>//input[contains(@data-bind,'StartDate')]</startDate>
+            <runTimeHour>#ddnHour</runTimeHour>
+            <runTimeMin>#ddnMinute</runTimeMin>
+            <numberOfOccourence>//input[contains(@data-bind,'NumberOfOccurences')]</numberOfOccourence>
+            <endDate>//input[contains(@data-bind,'EndDate')]</endDate>
+            <weeklyDays>//input[@type='checkbox' and contains(@data-bind,'ExtractFrequencyID')]</weeklyDays>
+            <monthlyDay>//select[contains(@data-bind,'daysOfMonth')]</monthlyDay>
+        </ExtractSchedule>
+        <PostCreation>
+            <saveButton>Save</saveButton>
+            <confirmBox>#alert-info-label</confirmBox>
+            <okButton>#alertInfoOKWithFunc</okButton>
+        </PostCreation>
+    </ExtractBuilder>
+</Extracts>
